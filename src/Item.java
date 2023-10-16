@@ -1,5 +1,6 @@
 import java.io.*;
 import java.sql.SQLOutput;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -76,6 +77,29 @@ public class Item {
             scanner.close();
         } catch (FileNotFoundException e) {
             System.err.println("Unable to open item data file for loading...");
+        }
+    }
+
+    public static void saveItemData() {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("item_data.txt"));
+
+            Iterator<Item> iterator = ItemList.iterator();
+            Item currentItem = null;
+
+            while (iterator.hasNext()) {
+                currentItem = iterator.next();
+                // Write item data in a formatted manner
+                writer.write(currentItem.getProductId() + "," + currentItem.getProductName() + ","
+                        + currentItem.getQuantity() + "," +currentItem.getPrice());
+                writer.newLine(); // Add a newline for each item
+            }
+
+            writer.close();
+            System.out.println("Item data saved to item_data.txt");
+        } catch (IOException e) {
+            System.err.println("Unable to open item data file for saving...");
+            e.printStackTrace();
         }
     }
 

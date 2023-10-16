@@ -1,0 +1,42 @@
+if(y.equals("y"))
+    {
+        setTotalDiscount(getAmount()*getDiscountPercent());
+        setAmount(getAmount()-getTotalDiscount());
+        Cashier.showCart();
+        System.out.println("Total Discount: "+"php "+getTotalDiscount());
+        System.out.println("Total Price: "+"php "+getAmount());
+        while(true) {
+            System.out.println("Enter cash payment: ");
+            payment = scanner.nextDouble();
+            if (payment>getAmount())
+            {
+                setAmount(0);
+                setTotalDiscount(0);
+                change = payment - getAmount();
+                break;
+            }
+            System.out.println("Payment not enough");
+        }
+
+    }
+                    else {
+        Cashier.showCart();
+        System.out.println("Total Discount: "+"php "+getTotalDiscount());
+        System.out.println("Total Price: "+"php "+getAmount());
+        while(true) {
+            System.out.println("Enter cash payment: ");
+            payment = scanner.nextDouble();
+            if (payment>getAmount())
+            {
+                change = payment - getAmount();
+                setAmount(0);
+                setTotalDiscount(0);
+                break;
+            }
+            System.out.println("Payment not enough");
+        }
+    }
+                    break;
+
+
+

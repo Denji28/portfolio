@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class Person {
 
-    public String FirstName,LastName,Status,Username,Password;
+    protected String FirstName,LastName,Status,Username,Password;
 
     public static String Container_stat;
     public static Boolean Checker =  false;
@@ -26,25 +26,25 @@ public class Person {
 
     public static void setChecker(Boolean checker) {Person.Checker = checker;}
 
-    public String getFirstName() {return FirstName;}
+    protected String getFirstName() {return FirstName;}
 
-    public void setFirstName(String firstName) {this.FirstName = firstName;}
+    protected void setFirstName(String firstName) {this.FirstName = firstName;}
 
-    public String getLastName() {return LastName;}
+    protected String getLastName() {return LastName;}
 
-    public void setLastName(String lastName) {this.LastName = lastName;}
+    protected void setLastName(String lastName) {this.LastName = lastName;}
 
-    public String getStatus(){return Status;}
+    protected String getStatus(){return Status;}
 
-    public void setStatus(String status) {this.Status = status;}
+    protected void setStatus(String status) {this.Status = status;}
 
-    public String getUsername() {return Username;}
+    protected String getUsername() {return Username;}
 
-    public void setUsername(String username) {this.Username = username;}
+    protected void setUsername(String username) {this.Username = username;}
 
-    public String getPassword(){return Password;}
+    protected String getPassword(){return Password;}
 
-    public void setPassword(String password) {this.Password = password;}
+    protected void setPassword(String password) {this.Password = password;}
 
     Person(String FirstName,String LastName,String Status,String Username,String Password)
     {

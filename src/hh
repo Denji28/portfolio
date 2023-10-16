@@ -1,0 +1,24 @@
+ String filePath = "PurchaseHistory.txt";
+
+ try {
+     BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true)); // Append to the file
+
+     Iterator<Item> iterator = CartList.iterator();
+     Item currentItem = null;
+     while (iterator.hasNext()) {
+         currentItem = iterator.next();
+         writer.write("ProductName: " + currentItem.getProductName());
+         writer.newLine();
+         writer.write("ProductQuantity: " + currentItem.getQuantity());
+         writer.newLine();
+         writer.write("ProductPrice: " + currentItem.getPrice());
+         writer.newLine();
+     }
+     writer.write("Total Amount: " + getAmount());
+     writer.newLine();
+     writer.write("Date&time: " + formattedDateTime);
+     writer.newLine();
+     writer.close(); // Close the writer to save the file
+ } catch (IOException e) {
+     e.printStackTrace();
+ }

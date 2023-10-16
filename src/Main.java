@@ -23,7 +23,7 @@ public class Main {
                 if (matcher.matches()) {
                     break;
                 } else {
-                    System.out.println("Input contains non-alphanumeric characters or no underscores.");
+                    System.out.println("Input contains non-alphanumeric characters.");
                 }
             }
             System.out.print("Enter Password: ");
@@ -58,6 +58,7 @@ public class Main {
                        Cashier.addToCart();
                        break;
                    case 2:
+                       Cashier.paymentProcess();
                        break;
                    case 3:
                        break;
