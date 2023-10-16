@@ -1,0 +1,2 @@
+123,toothpaste,8,50.0
+456,shampoo,20,100.0

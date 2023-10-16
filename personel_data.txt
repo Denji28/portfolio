@@ -1,0 +1,2 @@
+Bea,Paras,admin,Admin,Admin123
+Tiff,Gabriel,cashier,Cashier,Cashier123

@@ -1,0 +1,10 @@
+ProductName: shampoo
+ProductQuantity: 2
+ProductPrice: 200.0
+Total Amount: 200.0
+Date&time2023-10-16 23:02:46
+ProductName: toothpaste
+ProductQuantity: 2
+ProductPrice: 100.0
+Total Amount: 80.0
+Date&time: 2023-10-16 23:05:40
