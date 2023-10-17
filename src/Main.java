@@ -12,6 +12,7 @@ public class Main {
         Person.loadPersonel();
         Scanner scanner = new Scanner(System.in);
         int c = 0;
+        int c2 = 0;
         while(true)
         {
             while(true)
@@ -71,10 +72,11 @@ public class Main {
 
         if(Person.getContainer_stat().equals("admin"))
         {
-            while(true)
+            while(c!=3)
             {
                 System.out.println("[1] Item Menu");
                 System.out.println("[2] Personel Menu");
+                System.out.println("[3] Go Back");
                 System.out.print("Enter choice: ");
                 c = scanner.nextInt();
                 scanner.nextLine();
@@ -85,7 +87,7 @@ public class Main {
                         System.out.println("[3] Delete Item");
                         System.out.println("[4] Update Item");
                         System.out.println("[5] Display Purchase History");
-                        int c2 = scanner.nextInt();
+                        c2 = scanner.nextInt();
 
                         switch(c2)
                         {
@@ -103,7 +105,7 @@ public class Main {
                                 {
                                     AdminItems.deleteItem();
                                 } else if (c3==2) {
-
+                                    AdminItems.deleteAll();
                                 }
                                 else {
                                     System.out.println("not in the choices");
@@ -111,8 +113,10 @@ public class Main {
 
                                 break;
                             case 4:
+                                AdminItems.updateItem();
                                 break;
                             case 5:
+                                AdminItems.showHistory();
                                 break;
                             default:
                                 System.out.println("not in the choices");
@@ -120,6 +124,34 @@ public class Main {
 
                         }
                         break;
+                    case 2:
+                        System.out.println("[1] Add Personel");
+                        System.out.println("[2] Display Personel");
+                        System.out.println("[3] Delete Personel");
+                        System.out.println("[4] Update personel");
+                        int c3 = scanner.nextInt();
+                        switch(c3){
+                            case 1:
+                                AdminPersonel.addPerson();
+                                break;
+                            case 2:
+                                Person.showIPersonel();
+                                break;
+                            case 3:
+                                AdminPersonel.deletePersonel();
+                                break;
+                            case 4:
+                                AdminPersonel.updatePersonel();
+                                break;
+                            default:
+                                System.out.println("not in the choices");
+                                break;
+                        }
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        System.out.println("Choice not valid");
 
                 }
             }

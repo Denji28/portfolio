@@ -38,11 +38,17 @@ public class Item {
 
     public static void showItem()
     {
-        for (int i = 0; i < ItemList.size(); i++) {
-            System.out.println("Product ID " + ItemList.get(i).getProductId());
-            System.out.println("Product Name " + ItemList.get(i).getProductName());
-            System.out.println("Product Quantity " + ItemList.get(i).getQuantity());
-            System.out.println("Product Price " + "PHP " + ItemList.get(i).getPrice());
+        if(ItemList.isEmpty())
+        {
+            System.out.println("no Item to display");
+        }
+        else {
+            for (int i = 0; i < ItemList.size(); i++) {
+                System.out.println("Product ID " + ItemList.get(i).getProductId());
+                System.out.println("Product Name " + ItemList.get(i).getProductName());
+                System.out.println("Product Quantity " + ItemList.get(i).getQuantity());
+                System.out.println("Product Price " + "PHP " + ItemList.get(i).getPrice());
+            }
         }
 
     }

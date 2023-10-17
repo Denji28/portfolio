@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -7,8 +6,6 @@ import java.util.Iterator;
 
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 
 public class Person {
@@ -102,6 +99,48 @@ public class Person {
                 setContainer_stat(currentPerson.getStatus());
             }
         }
+    }
+
+
+    public static void savePersonData() {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("personel_data.txt"));
+
+            Iterator<Person> iterator = PersonelList.iterator();
+            Person currentPerson = null;
+
+            while (iterator.hasNext()) {
+                currentPerson = iterator.next();
+                // Write item data in a formatted manner
+                writer.write(currentPerson.getFirstName() + "," + currentPerson.getLastName() + ","
+                        + currentPerson.getStatus() + "," +currentPerson.getUsername()+","+currentPerson.getPassword());
+                writer.newLine(); // Add a newline for each item
+            }
+
+            writer.close();
+            System.out.println("Item data saved to personel_data.txt");
+        } catch (IOException e) {
+            System.err.println("Unable to open item data file for saving...");
+            e.printStackTrace();
+        }
+    }
+
+    public static void showIPersonel()
+    {
+        if(PersonelList.isEmpty())
+        {
+            System.out.println("no Item to display");
+        }
+        else {
+            for (int i = 0; i < PersonelList.size(); i++) {
+                System.out.println("Personel FirstName " + PersonelList.get(i).getFirstName());
+                System.out.println("Personel LasName " + PersonelList.get(i).getLastName());
+                System.out.println("Personel Position " + PersonelList.get(i).getStatus());
+                System.out.println("Personel username "  + PersonelList.get(i).getUsername());
+                System.out.println("Personel Password "  + PersonelList.get(i).getPassword());
+            }
+        }
+
     }
 
 }

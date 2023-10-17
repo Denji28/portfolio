@@ -34,10 +34,16 @@ public class Cashier extends Item {
 
     public static void showCart()
     {
-        for (int i = 0; i < CartList.size(); i++) {
-            System.out.println("Product Name " + CartList.get(i).getProductName());
-            System.out.println("Product Quantity " + CartList.get(i).getQuantity());
-            System.out.println("Product Price " + "PHP " + CartList.get(i).getPrice());
+        if(ItemList.isEmpty())
+        {
+            System.out.println("no Item to display");
+        }
+        else {
+            for (int i = 0; i < CartList.size(); i++) {
+                System.out.println("Product Name " + CartList.get(i).getProductName());
+                System.out.println("Product Quantity " + CartList.get(i).getQuantity());
+                System.out.println("Product Price " + "PHP " + CartList.get(i).getPrice());
+            }
         }
 
     }

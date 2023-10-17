@@ -1,2 +1,3 @@
 Bea,Paras,admin,Admin,Admin123
 Tiff,Gabriel,cashier,Cashier,Cashier123
+brian,nadonga,admin,brian,brian123
