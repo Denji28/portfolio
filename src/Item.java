@@ -42,7 +42,7 @@ public class Item {
             System.out.println("Product ID " + ItemList.get(i).getProductId());
             System.out.println("Product Name " + ItemList.get(i).getProductName());
             System.out.println("Product Quantity " + ItemList.get(i).getQuantity());
-            System.out.println("Product ID " + "PHP " + ItemList.get(i).getPrice());
+            System.out.println("Product Price " + "PHP " + ItemList.get(i).getPrice());
         }
 
     }

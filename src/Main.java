@@ -11,6 +11,7 @@ public class Main {
         Item.loadItem();
         Person.loadPersonel();
         Scanner scanner = new Scanner(System.in);
+        int c = 0;
         while(true)
         {
             while(true)
@@ -42,7 +43,6 @@ public class Main {
 
        if(Person.getContainer_stat().equals("cashier"))
        {
-           int c = 0;
            while(c!=3)
            {
                System.out.println("Cashier Menu");
@@ -68,6 +68,62 @@ public class Main {
                }
            }
        }
+
+        if(Person.getContainer_stat().equals("admin"))
+        {
+            while(true)
+            {
+                System.out.println("[1] Item Menu");
+                System.out.println("[2] Personel Menu");
+                System.out.print("Enter choice: ");
+                c = scanner.nextInt();
+                scanner.nextLine();
+                switch(c){
+                    case 1:
+                        System.out.println("[1] Add new Iteam");
+                        System.out.println("[2] Display Items");
+                        System.out.println("[3] Delete Item");
+                        System.out.println("[4] Update Item");
+                        System.out.println("[5] Display Purchase History");
+                        int c2 = scanner.nextInt();
+
+                        switch(c2)
+                        {
+                            case 1:
+                                AdminItems.storeItem();
+                                break;
+                            case 2:
+                                Item.showItem();
+                                break;
+                            case 3:
+                                System.out.println("[1] Delete one item");
+                                System.out.println("[2] Delete all Item");
+                                int c3 = scanner.nextInt();
+                                if(c3 == 1)
+                                {
+                                    AdminItems.deleteItem();
+                                } else if (c3==2) {
+
+                                }
+                                else {
+                                    System.out.println("not in the choices");
+                                }
+
+                                break;
+                            case 4:
+                                break;
+                            case 5:
+                                break;
+                            default:
+                                System.out.println("not in the choices");
+                                break;
+
+                        }
+                        break;
+
+                }
+            }
+        }
 
 
 
