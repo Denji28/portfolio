@@ -12,7 +12,7 @@ public class Main {
         Person.loadPersonel();
         Scanner scanner = new Scanner(System.in);
         int c = 0;
-        int c2 = 0;
+        int c2;
         while(true)
         {
             while(true)

@@ -1,13 +1,12 @@
 import java.io.*;
-import java.sql.SQLOutput;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Item {
-    public  String ProductName;
-    public  int ProductId,Quantity;
-    public  double Price;
+    protected  String ProductName;
+    protected  int ProductId,Quantity;
+    protected  double Price;
 
     protected static LinkedList<Item> ItemList = new LinkedList<>();
 

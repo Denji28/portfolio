@@ -19,7 +19,7 @@ public class Person {
 
     public static void setContainer_stat(String container_stat) {Person.Container_stat = container_stat;}
 
-    public static Boolean getChecker(){return Checker;};
+    public static Boolean getChecker(){return Checker;}
 
     public static void setChecker(Boolean checker) {Person.Checker = checker;}
 

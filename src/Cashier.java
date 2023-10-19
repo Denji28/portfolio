@@ -25,10 +25,10 @@ public class Cashier extends Item {
 
 
     public static double getTotalDiscount() {  return Cashier.TotalDiscount; }
-    public static void setTotalDiscount(double TotalDiscount){Cashier.TotalDiscount = TotalDiscount; };
+    public static void setTotalDiscount(double TotalDiscount){Cashier.TotalDiscount = TotalDiscount; }
 
     public static double getDiscountPercent() {  return Cashier.DiscountPercent; }
-    public static void setDiscountPercent(double DiscountPercent){Cashier.DiscountPercent = DiscountPercent; };
+    public static void setDiscountPercent(double DiscountPercent){Cashier.DiscountPercent = DiscountPercent;}
     private static LinkedList<Item> CartList = new LinkedList<>();
 
 
